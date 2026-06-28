@@ -84,7 +84,23 @@ fun mapKeyValueItem(){
     var valueInMap = 190
     var checkValueInMap = valueInMap in juiceMenu.values
     println("the $valueInMap on Map is: $checkValueInMap")
-
+}
+fun totalGreenAndBlueNumber(){
+    val greenNumbers = listOf(1,4,23)
+    val redNumbers = listOf(17,2)
+    val total = greenNumbers.count() + redNumbers.count()
+    println("total numbers is: $total")
+}
+fun checkProtocolIsSupport(){
+    val SUPPORTED = setOf("HTTP","HTTPS","FTP")
+    val requested = "smtp"
+    val isSupported = requested.uppercase() in SUPPORTED
+    println("Support for ${requested.uppercase()}: $isSupported")
+}
+fun mapRelateIntNumberToText(){
+    val number2word = mapOf(1 to "one",2 to "two", 3 to "three")
+    val n = 2
+    println("$n is spelled as '${number2word[n]}'")
 }
 fun main(){
     //List
@@ -96,4 +112,11 @@ fun main(){
     //Map
     println("\n Map \n")
     mapKeyValueItem()
+    println("\n Exercise \n")
+    //Ex1
+    totalGreenAndBlueNumber()
+    //Ex2
+    checkProtocolIsSupport()
+    //Ex3
+    mapRelateIntNumberToText()
 }
