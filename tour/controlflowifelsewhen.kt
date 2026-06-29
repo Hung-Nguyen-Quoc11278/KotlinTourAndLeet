@@ -1,4 +1,5 @@
 
+import kotlin.random.Random
 fun changeDbyIfElse(){
     val d: Int
     val check = false
@@ -46,6 +47,29 @@ fun whenWithoutSubject(){
     println(trafficAction)
 }
 
+fun ex1TwoDiceResult(){
+    val firsResult = Random.nextInt(6)
+    val secondResult = Random.nextInt(6)
+    println("numa: $firsResult numb: $secondResult")
+    if(firsResult == secondResult){
+        println("You win")
+    }else{
+        println("You lose")
+    }
+}
+
+fun ex2GameConsoleButtons(){
+    val button = "X"
+    val event = when (button){
+        "A" -> "Yes"
+        "B" -> "No"
+        "X" -> "Menu"
+        "Y" -> "Nothing"
+        else -> "There is not such button"
+    }
+    println("event: $event")
+}
+
 fun main(){
     //if else
     println("\n if else \n")
@@ -62,4 +86,10 @@ fun main(){
     //when without subject
     println("\n when without subject \n")
     whenWithoutSubject()
+    //exercise 1
+    println("\n ex1 \n")
+    ex1TwoDiceResult()
+    //exercise 2
+    println("\n ex2 \n")
+    ex2GameConsoleButtons()
 }
